@@ -12,6 +12,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Log.e("onActivityResult","mCurrentPhotoPath = " + mCurrentPhotoPath);
         if (resultCode == RESULT_OK && requestCode == REQUEST_CODE_TAKE_PHOTO) {
             mIvPhoto.setImageBitmap(BitmapFactory.decodeFile(mCurrentPhotoPath));
         }
