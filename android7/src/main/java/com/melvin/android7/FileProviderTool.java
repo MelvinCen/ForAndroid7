@@ -1,4 +1,4 @@
-package com.melvin.forandroid7.utils;
+package com.melvin.android7;
 
 import android.content.Context;
 import android.content.Intent;
